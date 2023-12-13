@@ -1,0 +1,38 @@
+@import url('./src/reset.css');
+
+body{
+ background-color: #C2C2C2;
+}
+
+.build{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0;
+}
+
+.thirthFloor {
+    display: flex;
+    width: 250px;
+    height: 200px;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 10px solid #000;
+}
+.thirthFloor p{
+    font-size: 60px;
+
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+.buttons button{
+    padding: 10px 5px;
+    margin: 5px 0;
+    background-color: crimson;
+}
