@@ -1,26 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const elevator = document.querySelector('.elevator');
+document.addEventListener("DOMContentLoaded", () => {
+  const btnUp3 = document.getElementById("btnUp3");
+  const btnDown3 = document.getElementById("btnDown3");
+  const btnUp2 = document.getElementById("btnUp2");
+  const btnDown2 = document.getElementById("btnDown2");
+  const btnUp1 = document.getElementById("btnUp1");
+  const btnDown1 = document.getElementById("btnDown1");
+  const btnUpt = document.getElementById("btnUpt");
 
-    const moveElevator = (direction) => {
-        const currentTop = parseInt(elevator.style.top) || 0;
-        const step = 210; // Pode ajustar o valor conforme necessário
+  const elevator = document.querySelector(".elevator");
+  const currentPosition = () => {
+    elevator.style.top = "679px";
+  };
+  currentPosition();
 
-        if (direction === 'up') {
-            elevator.style.top = `${currentTop - step}px`;
-        } else if (direction === 'down') {
-            elevator.style.top = `${currentTop + step}px`;
-        }
-    };
+  const moveElevatorUp = () => {
+    const step = 210;
+    const elevorPosition = parseInt(elevator.style.top);
 
-    // Adiciona ouvintes de eventos para cada botão
-    document.getElementById('btnUp3').addEventListener('click', () => moveElevator('up'));
-    document.getElementById('btnDown3').addEventListener('click', () => moveElevator('down'));
+    if (elevorPosition <= 679 && elevorPosition >= 259)
+      elevator.style.top = `${elevorPosition - step}px`;
+  };
 
-    document.getElementById('btnUp2').addEventListener('click', () => moveElevator('up'));
-    document.getElementById('btnDown2').addEventListener('click', () => moveElevator('down'));
+  const moveElevatorDown = () => {
+    const step = 210;
+    const elevorPosition = parseInt(elevator.style.top);
 
-    document.getElementById('btnUp1').addEventListener('click', () => moveElevator('up'));
-    document.getElementById('btnDown1').addEventListener('click', () => moveElevator('down'));
+    if (elevorPosition >= 49 &&elevorPosition <= 469)
+      elevator.style.top = `${elevorPosition + step}px`;
+  };
 
-    document.getElementById('btnUpt').addEventListener('click', () => moveElevator('up'));
+
+  btnUpt.addEventListener("click", moveElevatorUp);
+  btnDown1.addEventListener("click", moveElevatorDown);
 });

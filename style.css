@@ -79,19 +79,25 @@ body{
     border: 1px black solid;
     z-index: 1;
     position: absolute;
-    top: 679px;
     background-color: #D9D9D9;
     width: 120px;
     height: 150px;
     display: flex;
     justify-content: center;
     align-items: end;
+    transition: top 5s ease;
 }
 .elevator div{
     border: 1px black solid;
     background-color: #B2B2B2;
     width: 60px;
     height: 120px;
+}
+
+@keyframes moveDown {
+    0%{
+        top: 0
+    }    
 }
 
 /* 
