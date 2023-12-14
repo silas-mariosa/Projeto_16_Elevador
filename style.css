@@ -25,6 +25,42 @@ body{
     font-size: 60px;
 
 }
+.secondFloor {
+    display: flex;
+    width: 250px;
+    height: 200px;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 10px solid #000;
+}
+.secondFloor p{
+    font-size: 60px;
+
+}
+.firstFloor {
+    display: flex;
+    width: 250px;
+    height: 200px;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 10px solid #000;
+}
+.firstFloor p{
+    font-size: 60px;
+
+}
+.groundFloor {
+    display: flex;
+    width: 250px;
+    height: 200px;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 10px solid #000;
+}
+.groundFloor p{
+    font-size: 60px;
+
+}
 .buttons{    
     display: flex;
     flex-direction: column;
@@ -43,7 +79,7 @@ body{
     border: 1px black solid;
     z-index: 1;
     position: absolute;
-    top: 49px;
+    top: 679px;
     background-color: #D9D9D9;
     width: 120px;
     height: 150px;
@@ -57,3 +93,10 @@ body{
     width: 60px;
     height: 120px;
 }
+
+/* 
+3º 49 
+2º 259
+3º 469
+T  679
+*/
